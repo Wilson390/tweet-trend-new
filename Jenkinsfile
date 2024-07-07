@@ -9,6 +9,10 @@ pipeline {
        PATH = "/opt/apache-maven-3.9.8/bin:$PATH"
     }
 
+    tools {
+        jdk 'JDK 11' // Ensure this matches the name you gave JDK 11 in Global Tool Configuration
+    }
+
     stages {
         stage('build') {
             steps {
